@@ -1,0 +1,59 @@
+
+{
+    "digraph decks":[
+        {
+            "deck-id": 1,
+            "deck-category": "digraphs", 
+            "deck-name": "sh", 
+            "cards":[
+                {
+                    "card-one": {
+                        "card-position": 1,
+                        "word": "shot",
+                        "digraph": "sh",
+                        "first-half":"sh",
+                        "second-half": "ot",
+                        "image": "./digraph-images/syringe.png"
+            
+                    }, 
+                    "card-two": {
+                            "card-position": 2,
+                            "word": "sheep",
+                            "digraph": "sh",
+                            "first-half":"sh",
+                            "second-half": "eep",
+                            "image": "./digraph-images/sheep.png"
+                    }
+                }
+            ]
+
+        }, 
+        {
+            "deck-id": 2,
+            "deck-category": "digraphs", 
+            "deck-name": "th", 
+            "cards": [
+                {
+                    "card-one": {
+                        "card-position": 1,
+                        "word": "tooth",
+                        "digraph": "th",
+                        "first-half":"too",
+                        "second-half": "th",
+                        "image": "./digraph-images/tooth.png"
+            
+                    }, 
+                    "card-two": {
+                        "card-position": 2,
+                        "word": "think",
+                        "digraph": "th",
+                        "first-half":"th",
+                        "second-half": "ink",
+                        "image": "./digraph-images/think.png"
+                    }
+                }
+            ]
+        }  
+    ]
+}
+

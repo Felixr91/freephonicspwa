@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Alphabet", 
+        "id": 1
+    }, 
+    {
+        "name": "Digraphs", 
+        "id": 2
+    },
+    {
+        "name": "Trigraphs", 
+        "id": 3
+    },
+    {
+        "name": "Blends", 
+        "id": 4
+    },
+    {
+        "name": "Dipthongs", 
+        "id": 5
+    },
+    {
+        "name": "Vowel Pairs", 
+        "id": 6
+    }
+]
