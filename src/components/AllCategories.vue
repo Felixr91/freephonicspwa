@@ -2,37 +2,40 @@
   <div class="all-categories">
     <h1>Categories</h1>
 
-    <CardCategory v-for="category in categories" :key="category.id" :category="category" name="name">
-      {{ category.name }}
-    </CardCategory>
+    <v-card class="mx-auto my-12" max-width="374" v-for="category in categories" v-bind:key="category.id">
+      
+      <router-link v-bind:to="{name:'category', params: {id: category.name}}">
+        <div>{{category.name}}</div>
+      </router-link>
+    </v-card>
+
+    
   </div>
 </template>
 
 <script>
-import CardCategory from '@/components/CardCategory.vue'
-import CategoryService from '@/Services/CategoryService.js'
+
+import db from './firebaseInit'
+
 
 export default {
-  components:{
-    CardCategory
-  },
-  props: {
-    category: Object
-  },
   data(){
     return{
       categories: []
     }
   }, 
   created() {
-      CategoryService.getCategories()
-      .then(response => {
-        console.log(response.data)
-        this.categories = response.data // <--- set the events data
+    db.collection('categories').orderBy('name').get().then(querySnapshot => {
+      querySnapshot.forEach(doc => {
+        console.log(doc.data())
+        const data = {
+          'id':  doc.id,
+          'category_id': doc.data().category_id, 
+          'name': doc.data().name
+        }
+        this.categories.push(data)
       })
-      .catch(error => {
-        console.log('There was an error:', error.response)
-      })
+    })
   }
 };
 </script>

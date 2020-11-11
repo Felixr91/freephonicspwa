@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Present from "../views/Present.vue"
+import Category from "../components/Category.vue"
 
 Vue.use(VueRouter);
 
@@ -24,6 +25,12 @@ const routes = [
     path: '/present/:id', 
     name: 'present',
     component: Present, 
+    props: true
+  }, 
+  {
+    path: '/category-show/:id', 
+    name: 'category', 
+    component: Category,
     props: true
   }
 ];

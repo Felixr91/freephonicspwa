@@ -3,61 +3,65 @@
         [
             {
                 "name": "Alphabet", 
-                "id": 1
+                "id": 1, 
+                "categoryimage": "@/assets/sheep.png"
             }, 
             {
                 "name": "Digraphs", 
                 "id": 2, 
+                "categoryimage": "@/assets/sheep.png",
                 "decks": [
                     {
-                        "deck-id": 1,
-                        "deck-category": "digraphs", 
-                        "deck-name": "sh", 
+                        "deckid": 1,
+                        "deckcategory": "digraphs", 
+                        "deckname": "sh", 
+                        "deckimage": "@/assets/sheep.png",
                         "cards":[
                             {
-                                "card-one": {
-                                    "card-position": 1,
+                                "cardone": {
+                                    "cardposition": 1,
                                     "word": "shot",
                                     "digraph": "sh",
-                                    "first-half":"sh",
-                                    "second-half": "ot",
-                                    "image": "./digraph-images/syringe.png"
+                                    "firsthalf":"sh",
+                                    "secondhalf": "ot",
+                                    "image": "/assets/syringe.png"
                         
                                 }, 
-                                "card-two": {
-                                        "card-position": 2,
+                                "cardtwo": {
+                                        "cardposition": 2,
                                         "word": "sheep",
                                         "digraph": "sh",
-                                        "first-half":"sh",
-                                        "second-half": "eep",
-                                        "image": "./digraph-images/sheep.png"
+                                        "firsthalf":"sh",
+                                        "secondhalf": "eep",
+                                        "image": "@/assets/sheep.png"
                                 }
                             }
                         ]
             
                     }, 
                     {
-                        "deck-id": 2,
-                        "deck-category": "digraphs", 
-                        "deck-name": "th", 
+                        "deckid": 2,
+                        "deckcategory": "digraphs", 
+                        "deckname": "th", 
+                        "deckimage": "@/assets/sheep.png",
                         "cards": [
                             {
-                                "card-one": {
-                                    "card-position": 1,
+                                "cardone": {
+                                    "cardposition": 1,
                                     "word": "tooth",
                                     "digraph": "th",
-                                    "first-half":"too",
-                                    "second-half": "th",
-                                    "image": "./digraph-images/tooth.png"
+                                    "firsthalf":"too",
+                                    "secondhalf": "th",
+                                    "image": "/assets/tooth.png"
                         
                                 }, 
-                                "card-two": {
-                                    "card-position": 2,
+                                "cardtwo": {
+                                    "cardposition": 2,
                                     "word": "think",
                                     "digraph": "th",
-                                    "first-half":"th",
-                                    "second-half": "ink",
-                                    "image": "./digraph-images/think.png"
+                                    "firsthalf":"th",
+                                    "secondhalf": "ink",
+                                    "image": "/assets/think.png"
                                 }
                             }
                         ]
@@ -66,19 +70,23 @@
             },
             {
                 "name": "Trigraphs", 
-                "id": 3
+                "id": 3,
+                "categoryimage": "@/assets/sheep.png"
             },
             {
                 "name": "Blends", 
-                "id": 4
+                "id": 4, 
+                "categoryimage": "@/assets/sheep.png"
             },
             {
                 "name": "Dipthongs", 
-                "id": 5
+                "id": 5, 
+                "categoryimage": "@/assets/sheep.png"
             },
             {
                 "name": "Vowel Pairs", 
-                "id": 6
+                "id": 6,
+                "categoryimage": "@/assets/sheep.png"
             }
         ]
 
