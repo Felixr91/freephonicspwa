@@ -1,11 +1,11 @@
 <template>
     <div>
-        <h3> View all Decks in {{$route.params.id}} </h3>
+        <h3> All {{$route.params.id}} presentations</h3>
 
-        <v-card class="mx-auto my-12" max-width="374" v-for="deck in decks" v-bind:key="deck.id">
+        <v-card class="mx-auto my-12" max-width="374" v-for="presentation in presentations" v-bind:key="presentation.id">
         
-        <router-link v-bind:to="{name:'present', params: {id: deck.name}}">
-            <div>{{deck.name}}</div>
+        <router-link v-bind:to="{name:'present', params: {id: presentation.id}}">
+            <div>{{presentation.name}} || {{presentation.category}}</div>
         </router-link>
         </v-card>
 
@@ -16,22 +16,23 @@
 
 import db from './firebaseInit'
 
-
 export default {
   data(){
     return{
-      decks: []
+      presentations: []
     }
   }, 
   created() {
-    db.collection('decks').orderBy('name').get().then(querySnapshot => {
+    let location = this.$route.params.id
+    console.log(location)
+    db.collection('presentations').where('category', '===', location).get().then(querySnapshot => {
       querySnapshot.forEach(doc => {
-        console.log(doc.data())
         const data = {
           'id':  doc.id,
-          'name': doc.data().name
+          'name': doc.data().name, 
+          'category': doc.data().category
         }
-        this.decks.push(data)
+        this.presentations.push(data)
       })
     })
   }

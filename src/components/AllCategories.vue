@@ -27,7 +27,6 @@ export default {
   created() {
     db.collection('categories').orderBy('name').get().then(querySnapshot => {
       querySnapshot.forEach(doc => {
-        console.log(doc.data())
         const data = {
           'id':  doc.id,
           'category_id': doc.data().category_id, 
